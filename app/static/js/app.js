@@ -1,0 +1,1 @@
+console.log("PocketSmart AI loaded");

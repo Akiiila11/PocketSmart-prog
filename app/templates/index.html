@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+<h1>Smart Budget. Smart Recommendations.</h1>
+<p>Plan your home, party or jewelry purchase with budget-aware recommendations.</p>
+{% if not logged_in %}<a class="btn" href="/register">Get Started</a>{% endif %}
+</section>
+<div class="grid">
+  <a class="card" href="/planner/home"><h2>🏠 Home Interior</h2><p>Furniture, lighting and decor within your budget.</p></a>
+  <a class="card" href="/planner/party"><h2>🎉 Party Planner</h2><p>Food, venue, decoration and entertainment planning.</p></a>
+  <a class="card" href="/planner/jewelry"><h2>💎 Jewelry Planner</h2><p>Occasion and style based jewelry suggestions.</p></a>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ planner }} Recommendations</h1>
+
+<div class="summary">
+    <b>Budget:</b> ₹{{ result.budget }}<br>
+    <b>Source:</b> {{ result.source }}
+</div>
+
+<div class="grid" style="margin: 30px 0px;">
+
+{% for item in result["items"] %}
+
+    <div class="card">
+        <h2>{{ item.name }}</h2>
+
+        <p>
+            <b>Category:</b> {{ item.category }}
+        </p>
+
+        <p>
+            <b>Estimated price:</b> ₹{{ item.estimated_price }}
+        </p>
+
+        <p>
+            <b>Platform:</b> {{ item.platform }}
+        </p>
+
+        <p>
+            {{ item.reason }}
+        </p>
+    </div>
+
+{% endfor %}
+
+</div>
+
+<!-- <p class="note">
+    {{ result.note }}
+</p> -->
+
+<a class="btn" href="/dashboard">
+    Back to Dashboard
+</a>
+
+{% endblock %}

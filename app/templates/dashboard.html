@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Dashboard</h1>
+<div class="grid">
+<a class="card" href="/planner/home">🏠 Home Planner</a>
+<a class="card" href="/planner/party">🎉 Party Planner</a>
+<a class="card" href="/planner/jewelry">💎 Jewelry Planner</a>
+</div>
+<h2>Recent Recommendations</h2>
+{% for row in history %}
+<div class="history"><b>{{ row['planner']|title }}</b> — ₹{{ row['budget'] }} — {{ row['created_at'] }}</div>
+{% else %}<p>No recommendations yet.</p>{% endfor %}
+{% endblock %}

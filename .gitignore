@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+pocketsmart.db
+app/uploads/*
+!app/uploads/.gitkeep

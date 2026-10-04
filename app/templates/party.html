@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-card"><h1>🎉 Party Budget Planner</h1>
+<form method="post" action="/generate-party">
+<label>Total Budget (₹)<input type="number" name="budget" min="1" required></label>
+<label>Guest Count<input type="number" name="guests" min="1" required></label>
+<label>Event Type<select name="event_type"><option>Birthday</option><option>Wedding</option><option>Corporate</option><option>Family Function</option></select></label>
+<label>Venue Details<textarea name="venue" placeholder="Example: Coimbatore, indoor venue"></textarea></label>
+<button class="btn">Generate Recommendations</button>
+</form></div>
+{% endblock %}

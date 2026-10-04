@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-card"><h1>💎 Jewelry Budget Planner</h1>
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+<form method="post" action="/generate-jewelry" enctype="multipart/form-data">
+<label>Budget (₹)<input type="number" name="budget" min="1" required></label>
+<label>Occasion<select name="occasion"><option>Wedding</option><option>Birthday</option><option>Festival</option><option>Party</option><option>College Event</option></select></label>
+<label>Style<select name="style"><option>Traditional</option><option>Modern</option><option>Minimal</option><option>Statement</option></select></label>
+<label>Outfit Notes<textarea name="outfit_notes" placeholder="Colour and outfit details"></textarea></label>
+<label>Optional Outfit Image<input type="file" name="outfit_image" accept=".jpg,.jpeg,.png,.webp"></label>
+<button class="btn">Generate Recommendations</button>
+</form></div>
+{% endblock %}

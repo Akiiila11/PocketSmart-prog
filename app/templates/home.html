@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-card"><h1>🏠 Home Interior Budget Planner</h1>
+<form method="post" action="/generate-home">
+<label>Budget (₹)<input type="number" name="budget" min="1" required></label>
+<label>Room<select name="room"><option>Living Room</option><option>Bedroom</option><option>Kitchen</option><option>Dining Room</option></select></label>
+<label>Style<select name="style"><option>Modern</option><option>Minimal</option><option>Traditional</option><option>Contemporary</option></select></label>
+<label>Quantities / requirements<textarea name="quantities" placeholder="Example: 2 lights, 1 fan, 1 table"></textarea></label>
+<button class="btn">Generate Recommendations</button>
+</form></div>
+{% endblock %}

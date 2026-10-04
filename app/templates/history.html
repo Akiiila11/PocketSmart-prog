@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Recommendation History</h1>
+{% for row in history %}
+<div class="history"><b>{{ row['planner']|title }}</b> — Budget ₹{{ row['budget'] }} — {{ row['created_at'] }}
+<pre>{{ row['result_json'] }}</pre></div>
+{% else %}<p>No history found.</p>{% endfor %}
+{% endblock %}
